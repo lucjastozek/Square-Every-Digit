@@ -1,11 +1,17 @@
 /**
- * Adds together two numbers
- * @param a - the first number to add
- * @param b - the second number to add
- * @returns the total
+ * Squares every digit of a number and concatenates them.
+ * @param n - the number
+ * @returns squared n with squared digits
  */
-function sum(a: number, b: number): number {
-  return a + b;
+function squareDigits(n: number): number {
+  const num = String(n);
+  let squared = "";
+
+  for (let char of num) {
+    squared += String(parseInt(char)**2);
+  }
+
+  return parseInt(squared);
 }
 
-export default sum;
+export default squareDigits;
